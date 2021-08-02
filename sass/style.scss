@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&family=MuseoModerno:wght@400;500;700&display=swap');
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_header.scss";
+@import "_about.scss";
+@import "_service.scss";
+@import "_skills.scss";
+@import "_portfolio.scss";
+@import "_testimonails.scss";
+@import "_facts.scss";
+@import "_footer.scss";
+
+body {
+    @include asap;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #4d4d4d;
+}
+
+h2 {
+    font-size: 90px;
+    font-weight: $fw-medium;
+}
+
+h3 {
+    font-size: 46px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+h5 {
+    font-size: 22px;
+}
+.outer  {
+    padding-left: $base*3;
+    padding-right: $base*3;
+}
+
+.inner  {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.ta-c {
+    text-align: center;
+}
+
+.btn {
+    margin:0;
+    border:1px solid transparent;
+    outline: none;
+    padding:$base*3 $base*4;
+    font-weight: $fw-bold;
+    text-decoration: none;
+    transition:$transition;
+    box-sizing: border-box;
+    white-space: nowrap;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &--primary {
+        color: #4d4d4d;
+        background-color: #fff;
+        box-shadow: 4px 2px 7px #d4d4d4;
+
+        &:hover {
+            background-color: darken(#d4d4d4,5%);
+        }
+    }
+
+    &--no-bg {
+        color: #4d4d4d;
+        border: 1px solid #4d4d4d;
+        padding: $base*3 $base*9;
+
+        &:hover {
+            color:darken(#4d4d4d,10%);
+            border:1px solid darken(#4d4d4d,20%);
+        } 
+    }
+
+    @media (max-width:$screen-sm-max) {
+        padding: $base*2 $base*3;
+
+        &--no-bg {
+            padding: $base*2 $base*8;  
+        }
+    }
+
+}
+

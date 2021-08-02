@@ -1,0 +1,9 @@
+@mixin asap{
+    font-family: 'Asap', sans-serif;
+}
+  
+  @mixin list-null{
+    margin:0;
+    padding:0;
+    list-style: none;
+  }

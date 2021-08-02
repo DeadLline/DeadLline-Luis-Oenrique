@@ -1,0 +1,116 @@
+.testimonails {
+    .inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+        padding: $base*20 0; 
+    }
+}
+
+.testimonails__title {
+    text-transform: uppercase;
+    &::before {
+        content: '';
+        margin-left: $base*25;
+        display: block;
+        width: 30%;
+        height: 3px;
+        background-color: #7a7a7a;
+        margin-bottom: $base*2;
+    }
+}
+
+.testimonails-content {
+    border: 1px solid #212121;
+    padding: $base*20 $base*30;
+    text-transform: uppercase;
+}
+
+.testimonails-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: $base*8;
+
+    &-left {
+        padding-right: $base*7;
+    }
+    &__title {
+        font-weight: $fw-medium;
+        margin: 0;
+    }
+    &__subtitle {
+        font-size: 12px;
+        margin: 0;
+    }
+    &__text {
+        color: #919191;
+        max-width: 70%;
+        line-height: 1.5;
+    }
+}
+
+.dots {
+    @include list-null;
+    display: flex;
+    justify-content: center;
+
+    &__item {
+        border: 1px solid #212121;
+        width: 10px;
+        height: 10px;
+        margin-left: $base*2;
+        cursor: pointer;
+
+        &--active {
+           background-color: #212121; 
+        }
+    }
+}
+
+@media (max-width:$screen-sm-max) {
+    .testimonails__title {
+        font-size: 35px;
+
+        &::before {
+            margin-left: $base*20;
+        }
+    }
+
+    .testimonails-content {
+        padding: $base*15 $base*10;
+    }
+
+    .testimonails-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        text-align: center;
+
+        &-left {
+            padding: 0;
+        }
+
+        &__text {
+            font-size: 12px;
+            max-width: none;
+        }
+    }
+}
+
+@media (max-width:$screen-x-sm) {
+    .testimonails__title {
+        font-size: 25px;
+
+        &::before {
+            margin-left: $base*13;
+        }
+    }
+
+    .testimonails-wrapper {
+        &__text {
+            font-size: 9px;
+        }
+    }
+}
